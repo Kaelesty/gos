@@ -10258,14 +10258,6 @@ Authorization: Bearer <token>
 
 SOA -- это модель организации распределенных систем, в которой приложения взаимодействуют через сервисы с четкими контрактами. Для машинно-машинного взаимодействия SOA дает стандартизированный способ связывать разнородные системы: через сообщения, API, реестры, интеграционные шины, политики безопасности и управление версиями. Главная ценность SOA не в конкретной технологии вроде SOAP или REST, а в архитектурном принципе: бизнес-возможности должны быть доступны как управляемые, автономные и переиспользуемые сервисы.
 
-#### Источники
-
-1. OASIS Open. **Reference Model for Service Oriented Architecture (SOA-RM) v1.0**. URL: <https://docs.oasis-open.org/soa-rm/v1.0/soa-rm.html>
-2. OASIS Open. **Reference Architecture Foundation for Service Oriented Architecture Version 1.0**. URL: <https://docs.oasis-open.org/soa-rm/soa-ra/v1.0/csprd02/soa-ra-v1.0-csprd02.html>
-3. W3C. **Web Services Architecture**. URL: <https://www.w3.org/TR/ws-arch/>
-4. Microsoft Learn. **Service-oriented architecture**. URL: <https://learn.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/service-oriented-architecture>
-5. Martin Fowler, James Lewis. **Microservices**. URL: <https://martinfowler.com/articles/microservices.html>
-
 ### 2. Интеграция на основе SOAP-протокола. Схемы
 
 #### Определение
@@ -10724,16 +10716,6 @@ SOAP-интеграция - это способ построения распр�
 
 Главное преимущество SOAP - предсказуемость и строгость контракта. Главные недостатки - сложность, объемность XML и высокая зависимость от корректной настройки WSDL, XSD и WS-\* стандартов. Поэтому SOAP рационально использовать в сложных B2B, государственных, банковских и legacy-интеграциях, а для простых публичных API чаще выбирают REST/JSON.
 
-#### Источники
-
-1. W3C. **SOAP Version 1.2 Part 1: Messaging Framework**. https://www.w3.org/TR/soap12-part1/
-2. W3C. **SOAP Version 1.2 Part 2: Adjuncts**. https://www.w3.org/TR/soap12-part2/
-3. W3C. **Web Services Description Language (WSDL) 1.1**. https://www.w3.org/TR/wsdl/
-4. W3C. **XML Schema Definition Language (XSD) 1.1 Part 1: Structures**. https://www.w3.org/TR/xmlschema11-1/
-5. OASIS. **UDDI Version 3.0.2 Specification**. https://www.oasis-open.org/committees/uddi-spec/doc/tcspecs.htm
-6. WS-I. **Basic Profile**. https://www.ws-i.org/Profiles/BasicProfile-1.2.html
-7. OASIS. **Web Services Security: SOAP Message Security**. https://www.oasis-open.org/standard/wssv1-1/
-
 ### 3. Монолитная и микросервисная архитектура. Схема
 
 #### Краткий ответ
@@ -11016,15 +10998,6 @@ flowchart LR
 Микросервисная архитектура подходит для больших систем с несколькими командами, высокой нагрузкой и потребностью в независимом развитии компонентов. Ее главный плюс - гибкость и масштабируемость, главный риск - распределенная сложность.
 
 На практике разумный выбор часто выглядит так: начинать с модульного монолита, не нарушать границы предметной области, а микросервисы выделять только тогда, когда независимое масштабирование, независимые релизы или автономность команд дают измеримую пользу.
-
-#### Источники
-
-1. Martin Fowler, James Lewis. *Microservices: a definition of this new architectural term*. URL: <https://martinfowler.com/articles/microservices.html>
-2. Microsoft Learn. *Microservices architecture style*. URL: <https://learn.microsoft.com/en-us/azure/architecture/microservices/>
-3. Microsoft Learn. *.NET Microservices: Architecture for Containerized .NET Applications*. URL: <https://learn.microsoft.com/en-us/dotnet/architecture/microservices/>
-4. AWS. *What are Microservices?* URL: <https://aws.amazon.com/microservices/>
-5. Chris Richardson. *Microservices Patterns*. Manning, 2018.
-6. Sam Newman. *Building Microservices*. O'Reilly, 2015.
 
 ### 4. Интеграция на основе архитектурного стиля REST и GraphQL
 
@@ -11699,16 +11672,6 @@ GraphQL лучше подходит для сложных клиентских �
 
 На практике возможна комбинированная архитектура: REST используется для простых ресурсных операций, загрузки файлов, webhook и публичных endpoint, а GraphQL - для сложных клиентских экранов и агрегации данных из нескольких сервисов.
 
-#### Источники
-
-1. Fielding R. T. Architectural Styles and the Design of Network-based Software Architectures. Doctoral dissertation, University of California, Irvine, 2000.
-2. RFC 9110. HTTP Semantics. IETF, 2022.
-3. GraphQL Specification. GraphQL Foundation.
-4. Документация и материалы по REST API: ресурсы, HTTP-методы, коды состояния, OpenAPI/Swagger.
-5. Документация и материалы по GraphQL: schema, query, mutation, subscription, resolver.
-6. Richardson L., Ruby S. RESTful Web Services. O'Reilly Media.
-7. Материалы курса по программной инженерии и интеграции информационных систем: архитектурный стиль REST, GraphQL, схемы и примеры реализации.
-
 ### 5. Интеграция на основе архитектурного стиля WebSocket и WebHook
 
 #### Краткое определение
@@ -12147,15 +12110,6 @@ sequenceDiagram
 WebSocket и WebHook - два важных подхода к событийной интеграции, но они не являются взаимозаменяемыми. WebSocket нужен для постоянного двустороннего real-time обмена, когда клиент или сервис должен получать события мгновенно и может поддерживать открытое соединение. WebHook нужен для backend-callback интеграции, когда одна система сообщает другой о событии обычным HTTP-запросом.
 
 В экзаменационном ответе важно подчеркнуть: WebSocket - это постоянный канал и full-duplex коммуникация; WebHook - это событийный HTTP callback. WebSocket сложнее масштабировать из-за состояния соединений, а WebHook требует строгой проверки подписи, идемпотентности и обработки повторных доставок. В зрелой архитектуре они часто дополняют друг друга: WebHook принимает внешнее событие, backend фиксирует состояние, а WebSocket доставляет обновление пользователю в реальном времени.
-
-#### Источники
-
-- RFC 6455, The WebSocket Protocol: https://www.rfc-editor.org/rfc/rfc6455
-- MDN Web Docs, WebSocket API: https://developer.mozilla.org/en-US/docs/Web/API/WebSocket
-- GitHub Docs, Using webhooks: https://docs.github.com/en/webhooks/using-webhooks
-- GitHub Docs, Validating webhook deliveries: https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries
-- Stripe Documentation, Receive Stripe events in your webhook endpoint: https://docs.stripe.com/webhooks
-- Stripe Documentation, Resolve webhook signature verification errors: https://docs.stripe.com/webhooks/signature
 
 ### 6. Протоколы взаимодействия между web-приложениями по сети Интернет
 
@@ -12688,17 +12642,6 @@ flowchart TD
 
 Главная инженерная задача - выбрать протокол по характеру обмена: запрос-ответ, поток сервер-клиент, двусторонний поток, формальный enterprise-контракт или высокопроизводительный внутренний RPC. Неправильный выбор усложняет масштабирование, безопасность, отладку и поддержку API.
 
-#### Источники
-
-1. RFC 9110: HTTP Semantics - https://www.rfc-editor.org/rfc/rfc9110.html
-2. RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3 - https://www.rfc-editor.org/rfc/rfc8446
-3. RFC 6455: The WebSocket Protocol - https://www.rfc-editor.org/rfc/rfc6455
-4. RFC 1035: Domain Names - Implementation and Specification - https://www.rfc-editor.org/rfc/rfc1035
-5. Roy Fielding, Architectural Styles and the Design of Network-based Software Architectures - https://ics.uci.edu/~fielding/pubs/dissertation/top.htm
-6. W3C SOAP Version 1.2 Part 1: Messaging Framework - https://www.w3.org/TR/soap12/
-7. WHATWG HTML Living Standard, Server-sent events - https://html.spec.whatwg.org/multipage/server-sent-events.html
-8. gRPC Core Concepts - https://grpc.io/docs/what-is-grpc/core-concepts/
-
 ### 7. Шаблоны интеграций информационных систем по структуре взаимодействия
 
 #### Краткий ответ
@@ -13208,14 +13151,6 @@ BI-система должна получать сведения о заказа
 
 Главный критерий выбора - не модность технологии, а требования конкретной системы: количество участников, синхронность, задержка, надежность, согласованность данных, сложность процесса, аудит, безопасность и стоимость сопровождения.
 
-#### Источники
-
-1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns*: описание базовых интеграционных паттернов, включая message channel, point-to-point channel, message broker, message router. URL: https://www.enterpriseintegrationpatterns.com/
-2. Microsoft Learn. *API gateway pattern*: назначение API Gateway в микросервисной архитектуре. URL: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/gateway
-3. Microsoft Learn. *Asynchronous messaging options*: общие подходы к очередям и публикации-событийной модели в интеграциях. URL: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging
-4. IBM. *Enterprise Service Bus*: назначение ESB как интеграционного слоя для сервисов и приложений. URL: https://www.ibm.com/topics/esb
-5. Chris Richardson. *Saga pattern: orchestration and choreography*: сравнение orchestration и choreography в распределенных транзакциях. URL: https://microservices.io/patterns/data/saga.html
-
 ### 8. Шаблоны интеграций информационных систем по типу обмена данных
 
 Интеграция информационных систем - это организация обмена данными и событиями между приложениями, сервисами, базами данных и внешними платформами. По типу обмена данные могут передаваться синхронно или асинхронно, отдельными сообщениями или потоками, часто или пакетно, через API, очередь, файл, общую БД или брокер событий.
@@ -13662,15 +13597,6 @@ flowchart LR
 
 Рациональная архитектура часто комбинирует несколько шаблонов: например, пользовательский запрос оформляет заказ через request-response, событие заказа распространяется через publish-subscribe, email отправляется через fire-and-forget, аналитика получает поток событий, а финансовая сверка выполняется ночным batch-процессом.
 
-#### Источники
-
-1. Hohpe G., Woolf B. *Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
-2. Fowler M. *Patterns of Enterprise Application Architecture*. Addison-Wesley, 2002.
-3. Microsoft Azure Architecture Center. *Asynchronous Request-Reply pattern*, *Publisher-Subscriber pattern*, *Competing Consumers pattern*, *Queue-Based Load Leveling pattern*.
-4. Apache Kafka Documentation. *Kafka Design*, *Consumer Groups*, *Streams Concepts*.
-5. AWS Prescriptive Guidance. *Integration patterns for microservices*, *Event-driven architecture*, *Batch processing and file transfer patterns*.
-6. Richardson C. *Microservices Patterns*. Manning, 2018.
-
 ### 9. Модели разработки ПО: итеративная, инкрементная, водопадная, спиральная
 
 #### Краткое определение
@@ -13964,14 +13890,6 @@ flowchart TB
 
 ---
 
-#### Источники
-
-1. [3] Материалы курса по программной инженерии: раздел о моделях жизненного цикла разработки ПО.
-2. [5, с. 10] Учебные материалы по программной инженерии: классификация моделей разработки ПО и схемы жизненного цикла.
-3. Royce W. W. *Managing the Development of Large Software Systems*. Proceedings of IEEE WESCON, 1970.
-4. Boehm B. W. *A Spiral Model of Software Development and Enhancement*. Computer, 1988.
-5. Sommerville I. *Software Engineering*. Разделы о процессах разработки ПО и моделях жизненного цикла.
-
 ### 10. Наборы практик Scrum и Kanban
 
 #### Краткое определение
@@ -14251,13 +14169,6 @@ Scrum и Kanban решают близкую задачу - помогают ко
 **Kanban** организует работу через визуализацию потока, WIP-лимиты, явные политики и постоянное улучшение. Его сила - управление очередями, перегрузкой и временем прохождения задач. Он подходит для процессов с непрерывным входящим потоком: поддержки, эксплуатации, DevOps, сопровождения и небольших доработок.
 
 На практике важно не название метода, а дисциплина его применения. Scrum без готового инкремента и ретроспектив превращается в формальный календарь встреч. Kanban без WIP-лимитов и анализа потока превращается в обычную доску задач. Эффективная команда использует практики осознанно: делает работу видимой, ограничивает перегрузку, регулярно получает обратную связь и улучшает процесс на основе фактов.
-
-#### Источники
-
-1. Источники из списка дисциплины, указанные в вопросе: **[2]**, **[3]**, **[5, стр. 20]**.
-2. Schwaber K., Sutherland J. **The Scrum Guide**. November 2020. Официальное руководство Scrum: <https://scrumguides.org/scrum-guide.html>.
-3. Coleman J., Vacanti D. **The Kanban Guide**. December 2020. Официальное минимальное руководство Kanban: <https://kanbanguides.org/the-kanban-guide/>.
-4. Anderson D. J. **Kanban: Successful Evolutionary Change for Your Technology Business**. Blue Hole Press, 2010.
 
 ### 11. Уровни и типы требований по К. Вигерсу
 
@@ -14545,13 +14456,6 @@ flowchart LR
 По К. Вигерсу требования нужно рассматривать на нескольких уровнях: **бизнес-требования** объясняют ценность продукта, **пользовательские требования** описывают цели пользователей, **функциональные требования** задают поведение системы. Рядом с ними находятся **нефункциональные требования**, которые определяют качество работы, **ограничения**, которые задают рамки реализации, и **бизнес-правила**, которые отражают правила предметной области и порождают конкретные требования к системе.
 
 Смысл схемы на [5, стр. 51] - показать, что требования должны быть связаны. Нельзя качественно проектировать и тестировать систему, если функция не прослеживается к пользовательской задаче и бизнес-цели. Правильная классификация делает требования понятными, проверяемыми и управляемыми.
-
-#### Источники
-
-1. Wiegers K., Beatty J. **Software Requirements**. 3rd ed. Microsoft Press, 2013.
-2. Вигерс К., Битти Дж. **Разработка требований к программному обеспечению**. 3-е изд. Русское издание. Раздел об уровнях и типах требований, схема на стр. 51.
-3. ISO/IEC/IEEE 29148:2018. **Systems and software engineering - Life cycle processes - Requirements engineering**.
-4. IIBA. **A Guide to the Business Analysis Body of Knowledge (BABOK Guide)**. Требования, бизнес-правила, трассировка и анализ изменений.
 
 ### 12. Свойства качественных требований
 
@@ -14907,13 +14811,6 @@ ID: REQ-AUTH-03
 #### Вывод
 
 Качество требований определяет качество всей последующей разработки. Требование должно быть не просто записано, а доведено до состояния инженерного артефакта: оно понятно участникам проекта, связано с потребностью, не конфликтует с другими правилами, выполнимо, проверяемо и имеет трассировку. Чем лучше сформулированы требования, тем меньше риск переделок, споров при приемке и реализации ненужной функциональности.
-
-#### Источники
-
-1. Учебный источник [5], стр. 54 - свойства качественных требований: корректность, полнота, непротиворечивость, однозначность, проверяемость, реализуемость, трассируемость.
-2. ISO/IEC/IEEE 29148:2018, Systems and software engineering - Life cycle processes - Requirements engineering.
-3. Karl Wiegers, Joy Beatty. Software Requirements. Microsoft Press.
-4. SWEBOK Guide, раздел Software Requirements.
 
 ### 12. Методы анализа качества интерфейсов
 
@@ -15286,16 +15183,6 @@ flowchart TD
 
 Наиболее надежный подход - комбинировать методы. Качественные методы объясняют причины проблем, количественные методы показывают масштаб и эффект изменений. Поэтому анализ интерфейса должен быть циклом: определить цель, выбрать сценарии, собрать данные, исправить проблемы и проверить результат повторно.
 
-#### Источники
-
-1. Источник из списка дисциплины, указанный в вопросе: **[5, стр. 125]**.
-2. ISO 9241-11:2018. **Ergonomics of human-system interaction - Part 11: Usability: Definitions and concepts**.
-3. Nielsen J. **10 Usability Heuristics for User Interface Design**. Nielsen Norman Group. URL: <https://www.nngroup.com/articles/ten-usability-heuristics/>
-4. Nielsen J. **How to Conduct a Heuristic Evaluation**. Nielsen Norman Group. URL: <https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/>
-5. Lewis C., Wharton C. **Cognitive Walkthroughs**. In: Handbook of Human-Computer Interaction, 1997.
-6. Brooke J. **SUS: A quick and dirty usability scale**. In: Usability Evaluation in Industry, 1996.
-7. W3C. **Web Content Accessibility Guidelines (WCAG) 2.2**. URL: <https://www.w3.org/TR/WCAG22/>
-
 ### 13. Проектирование интерфейсов на основе UX/UI-методов
 
 #### Краткое определение
@@ -15615,19 +15502,6 @@ WCAG формулирует четыре базовых принципа дос�
 Проектирование интерфейсов на основе UX/UI-методов - это не только создание красивых экранов. Это инженерно-дизайнерский процесс, в котором команда изучает пользователей, формулирует задачи, строит сценарии, создает прототипы, проверяет их на реальных людях и только затем детализирует визуальный интерфейс. UX обеспечивает полезность и удобство продукта, UI обеспечивает понятное, единообразное и эстетичное взаимодействие. Дизайн-системы и требования доступности помогают сохранять качество интерфейса при масштабировании продукта.
 
 Хороший интерфейс не заставляет пользователя думать о самой системе. Он помогает быстро, безопасно и понятно выполнить нужную задачу.
-
-#### Источники
-
-1. ISO 9241-210:2019. Ergonomics of human-system interaction - Human-centred design for interactive systems. https://www.iso.org/standard/77520.html
-2. NIST. Human Centered Design. https://www.nist.gov/itl/iad/visualization-and-usability-group/human-factors-human-centered-design
-3. Nielsen Norman Group. Usability Testing 101. https://www.nngroup.com/articles/usability-testing-101/
-4. Nielsen Norman Group. Why You Only Need to Test with 5 Users. https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/
-5. W3C Web Accessibility Initiative. Web Content Accessibility Guidelines (WCAG) 2 Overview. https://www.w3.org/WAI/standards-guidelines/wcag/
-6. W3C. Web Content Accessibility Guidelines (WCAG) 2.2. https://www.w3.org/TR/WCAG22/
-7. U.S. Web Design System. Design tokens. https://designsystem.digital.gov/design-tokens/
-8. U.S. Web Design System. Design principles. https://designsystem.digital.gov/design-principles/
-9. Norman D. The Design of Everyday Things. Basic Books.
-10. Cooper A., Reimann R., Cronin D., Noessel C. About Face: The Essentials of Interaction Design. Wiley.
 
 ### 14. Протоколы взаимодействия между сервисами по сети Интернет
 
@@ -16307,18 +16181,6 @@ flowchart TD
 
 Для экзамена важно подчеркнуть: протокол - это не только формат передачи данных, но и гарантии взаимодействия. Надежная сервисная интеграция требует HTTPS/TLS, аутентификации, авторизации, таймаутов, идемпотентности, корректных кодов ошибок, повторов с backoff, версионирования контрактов, мониторинга и трассировки.
 
-#### Источники
-
-1. Источник из списка дисциплины, указанный в вопросе: **[5, стр. 85]**.
-2. RFC 9110. HTTP Semantics. IETF, 2022. https://www.rfc-editor.org/rfc/rfc9110.html
-3. RFC 8446. The Transport Layer Security (TLS) Protocol Version 1.3. IETF, 2018. https://www.rfc-editor.org/rfc/rfc8446
-4. RFC 6455. The WebSocket Protocol. IETF, 2011. https://www.rfc-editor.org/rfc/rfc6455
-5. W3C. SOAP Version 1.2 Part 1: Messaging Framework. https://www.w3.org/TR/soap12/
-6. gRPC Documentation. Core concepts. https://grpc.io/docs/what-is-grpc/core-concepts/
-7. OASIS. Advanced Message Queuing Protocol (AMQP) Version 1.0. https://docs.oasis-open.org/amqp/core/v1.0/amqp-core-overview-v1.0.html
-8. OASIS. MQTT Version 5.0 Specification. https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html
-9. Fielding R. T. Architectural Styles and the Design of Network-based Software Architectures. University of California, Irvine, 2000.
-
 ### 15. Типы пользовательских интерфейсов [5, стр.123]
 
 #### Краткое определение
@@ -16992,17 +16854,6 @@ flowchart LR
 
 Хороший интерфейс - не тот, который выглядит современно, а тот, который помогает конкретному пользователю безопасно, понятно и эффективно выполнить конкретную задачу.
 
-#### Источники
-
-1. ISO 9241-110:2020. Ergonomics of human-system interaction - Interaction principles. https://www.iso.org/standard/75258.html
-2. ISO 9241-210:2019. Ergonomics of human-system interaction - Human-centred design for interactive systems. https://www.iso.org/standard/77520.html
-3. W3C. Web Content Accessibility Guidelines (WCAG) 2.2. https://www.w3.org/TR/WCAG22/
-4. Apple. Human Interface Guidelines. https://developer.apple.com/design/human-interface-guidelines/
-5. Google. Material Design. https://m3.material.io/
-6. Microsoft Learn. Command-Line Syntax Key. https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key
-7. Nielsen Norman Group. Usability and user interface design materials. https://www.nngroup.com/articles/
-8. Shneiderman B., Plaisant C., Cohen M., Jacobs S., Elmqvist N. Designing the User Interface: Strategies for Effective Human-Computer Interaction.
-
 ### 16. Метод анализа пользовательского интерфейса по метрикам Константайна и Локвуда
 
 #### Краткое определение
@@ -17310,14 +17161,6 @@ flowchart TD
 Метод Константайна и Локвуда позволяет системно анализировать пользовательский интерфейс через связь **ролей, задач, сценариев, навигации и визуальной организации**. Его ключевая ценность в том, что интерфейс оценивается как инструмент выполнения работы: насколько быстро пользователь достигает цели, видит ли нужные действия, соответствует ли структура экрана модели задач, сохраняется ли согласованность и поддерживаются ли разные роли.
 
 Для экзамена важно запомнить пять основных метрик: **Essential Efficiency**, **Task Concordance**, **Task Visibility**, **Layout Uniformity**, **Visual Coherence**. Через них оцениваются сложность сценария, навигационная перегрузка, соответствие задачам, видимость действий и согласованность интерфейса.
-
-#### Источники
-
-1. Constantine L. L., Lockwood L. A. D. *Software for Use: A Practical Guide to the Models and Methods of Usage-Centered Design*. Addison-Wesley, 1999. URL: https://www.informit.com/store/software-for-use-a-practical-guide-to-the-models-and-9780768684711
-2. Constantine L. L., Lockwood L. A. D. Usage-centered design: models, methods, and metrics for improving user interfaces. URL: https://www.researchgate.net/publication/221553765_Usage-Centered_Software_Engineering_An_Agile_Approach_to_Integrating_Users_User_Interfaces_and_Usability_into_Software_Engineering_Practice
-3. ISO 9241-210:2019. *Ergonomics of human-system interaction - Human-centred design for interactive systems*.
-4. Nielsen J. *Usability Engineering*. Morgan Kaufmann, 1993.
-5. Учебный источник из списка дисциплины: метод анализа пользовательского интерфейса по метрикам Константайна и Локвуда, с. 126.
 
 ### 17. Метод анализа пользовательского интерфейса по метрикам GOSM
 
@@ -17857,16 +17700,6 @@ GOMS занимает место среди аналитических мето�
 
 Метод, который в вопросе назван GOSM, в контексте UI-анализа корректнее раскрывать как **GOMS**. Это классический способ формального анализа пользовательских задач: сначала определяются цели пользователя, затем задача раскладывается на операторы, методы и правила выбора, после чего можно оценить интерфейс по расчетным метрикам. Самый практичный вариант - **KLM-GOMS**, где время выполнения задачи считается как сумма времен элементарных действий. Метод помогает сравнивать интерфейсные решения, находить лишние действия и проектировать более быстрые сценарии, но его нужно дополнять тестированием на реальных пользователях, особенно если важны обучаемость, ошибки новичков и субъективное восприятие.
 
-#### Источники
-
-1. Card S. K., Moran T. P., Newell A. **The Psychology of Human-Computer Interaction**. Lawrence Erlbaum Associates, 1983 - классическое изложение GOMS.
-2. John B. E., Kieras D. E. **The GOMS Family of User Interface Analysis Techniques: Comparison and Contrast**. ACM Transactions on Computer-Human Interaction, 1996 - сравнение KLM-GOMS, CMN-GOMS, NGOMSL и CPM-GOMS.
-3. Card S. K., Moran T. P., Newell A. **The Keystroke-Level Model for User Performance Time with Interactive Systems**. Communications of the ACM, 1980 - основа KLM-GOMS и расчетов времени.
-4. Kieras D. E. **A Guide to GOMS Model Usability Evaluation using GOMSL and GLEAN** - практическое руководство по построению GOMS-моделей.
-5. Dix A., Finlay J., Abowd G., Beale R. **Human-Computer Interaction** - обзор методов анализа и оценки пользовательских интерфейсов.
-6. Nielsen J. **Usability Engineering** - методы инженерной оценки удобства интерфейсов и связь аналитических методов с usability-тестированием.
-7. Учебный источник из списка дисциплины, указанный в вопросе: **[5, стр. 126]**. В ответе следует учитывать возможную опечатку GOSM и раскрывать стандартный метод **GOMS**.
-
 ### 18. Построение карты эмпатий [5, стр.136]
 
 #### Краткое определение
@@ -18325,14 +18158,6 @@ flowchart TD
 Карта эмпатии - это простой, но важный инструмент UX-анализа. Она помогает команде увидеть пользователя не как набор демографических характеристик, а как человека, который решает конкретную задачу в конкретном контексте, имеет ожидания, сомнения, эмоции и ограничения.
 
 В экзаменационном ответе важно подчеркнуть, что карта эмпатии строится не ради оформления, а ради принятия проектных решений. Ее результатом должны быть инсайты, UX-гипотезы, требования к интерфейсу и сценарии проверки. Наиболее ценна карта, основанная на реальных данных и построенная для конкретного сегмента пользователя. Если карта показывает, что пользователь говорит, думает, делает и чувствует, команда получает основу для более удобного, понятного и человеко-ориентированного продукта.
-
-#### Источники
-
-1. Источник из списка дисциплины, указанный в вопросе: **[5, стр.136]**.
-2. Dave Gray, Sunni Brown, James Macanufo. **Gamestorming: A Playbook for Innovators, Rulebreakers, and Changemakers**. O'Reilly Media, 2010. Описывает визуальные фасилитационные методы, включая empathy map как инструмент командного понимания пользователя.
-3. XPLANE. **Updated Empathy Map Canvas**. Материалы Дэйва Грея и XPLANE по обновленной карте эмпатии: https://medium.com/the-xplane-collection/updated-empathy-map-canvas-46df22df3c8a
-4. Nielsen Norman Group. **Empathy Mapping: The First Step in Design Thinking**. Обзор роли empathy mapping в UX и design thinking: https://www.nngroup.com/articles/empathy-mapping/
-5. ISO 9241-210:2019. **Ergonomics of human-system interaction - Part 210: Human-centred design for interactive systems**. Стандарт о человеко-ориентированном проектировании интерактивных систем.
 
 ### 19. Модели качества программного обеспечения
 
@@ -19073,17 +18898,6 @@ McCall и Boehm заложили классический подход: каче
 
 ---
 
-#### Источники
-
-1. ISO, **ISO/IEC 25010:2023. Systems and software engineering - Systems and software Quality Requirements and Evaluation (SQuaRE) - Product quality model**: https://www.iso.org/standard/78176.html
-2. ISO 25000 Portal, **ISO/IEC 25010**: https://www.iso25000.com/index.php/en/iso-25000-standards/iso-25010
-3. ISO/IEC, **ISO/IEC 25010:2011. Systems and software engineering - Systems and software Quality Requirements and Evaluation (SQuaRE) - System and software quality models**.
-4. J. A. McCall, P. K. Richards, G. F. Walters, **Factors in Software Quality**, National Technical Information Service, 1977.
-5. B. W. Boehm, J. R. Brown, H. Kaspar, M. Lipow, G. MacLeod, M. Merritt, **Characteristics of Software Quality**, North-Holland, 1978.
-6. R. B. Grady, D. L. Caswell, **Software Metrics: Establishing a Company-Wide Program**, Prentice Hall, 1987.
-7. IBM developerWorks / Rational, **Capturing architectural requirements with FURPS+**.
-8. ISO/IEC 25000 SQuaRE series: quality requirements, product quality models, measurement and evaluation standards.
-
 ### 20. Контроль и обеспечение качества ПО [8]
 
 #### Краткое определение
@@ -19779,15 +19593,6 @@ Commit
 
 QA, QC и testing образуют единую систему управления качеством, но выполняют разные функции. **QA строит процесс, QC контролирует результат, testing предоставляет данные о поведении продукта**. Чем раньше качество встроено в жизненный цикл, тем дешевле исправлять ошибки и тем выше вероятность получить надежный, удобный и сопровождаемый продукт. Зрелая разработка рассматривает качество как ответственность всей команды, а не как финальную проверку перед релизом.
 
-#### Источники
-
-1. ISO. **ISO 9001 Quality management systems**. Описание стандарта системы менеджмента качества: <https://www.iso.org/iso-9001-quality-management.html>
-2. ISO. **ISO/IEC 25010:2023 Systems and software engineering - SQuaRE - Product quality model**: <https://www.iso.org/standard/78176.html>
-3. ISO JTC 1/SC 7. **ISO/IEC/IEEE 29119 series - Software testing**: <https://committee.iso.org/sites/jtc1sc7/home/projects/flagship-standards/isoiecieee-29119-series.html>
-4. IEEE Computer Society. **SWEBOK Guide, Software Quality knowledge area**: <https://www.computer.org/education/bodies-of-knowledge/software-engineering>
-5. ISTQB. **ISTQB Glossary**: <https://glossary.istqb.org/>
-6. ISO/IEC/IEEE 29119-4:2015. **Software and systems engineering - Software testing - Part 4: Test techniques**: <https://standards.ieee.org/standard/29119-4-2015.html>
-
 ### 21. Классификация тестирования по способу тестирования. Примеры
 
 #### Краткий ответ
@@ -20056,14 +19861,6 @@ flowchart LR
 Классификация по способу тестирования помогает выбрать подходящий метод проверки под конкретную задачу. **Ручное тестирование** дает гибкость и человеческую оценку, **автоматизированное** обеспечивает быстрый повторяемый контроль, **статическое** находит дефекты до запуска программы, **динамическое** проверяет реальное поведение системы. Подходы **черного, белого и серого ящика** различаются степенью знания внутренней структуры, а **позитивные и негативные тесты** показывают, проверяем ли мы штатное или ошибочное поведение.
 
 Хорошая стратегия тестирования обычно сочетает все эти способы: ранние ревью, статический анализ, ручное исследование, автоматизированный регресс, проверки по требованиям и проверки внутренней логики.
-
-#### Источники
-
-1. ISTQB Glossary. Термины: *static testing*, *dynamic testing*, *black-box testing*, *white-box testing*, *test automation*. <https://glossary.istqb.org/>
-2. ISTQB Certified Tester Foundation Level Syllabus v4.0.1. Разделы о статическом тестировании, техниках тест-дизайна и автоматизации. <https://istqb.org/certifications/certified-tester-foundation-level>
-3. IEEE Computer Society. *Guide to the Software Engineering Body of Knowledge (SWEBOK Guide)*, Software Testing chapter. <https://www.computer.org/education/bodies-of-knowledge/software-engineering>
-4. NIST Computer Security Resource Center Glossary. Термин *gray box testing*. <https://csrc.nist.gov/glossary>
-5. Microsoft Learn. Материалы по unit testing, automated testing и проверкам качества в жизненном цикле разработки. <https://learn.microsoft.com/>
 
 ### 22. Классификация тестирования по целям тестирования. Примеры
 
@@ -20598,17 +20395,6 @@ Sanity - быстрая проверка конкретной измененно
 
 ---
 
-#### Источники
-
-1. ISTQB Glossary. Термины software testing, functional testing, non-functional testing, regression testing, acceptance testing, smoke testing: <https://glossary.istqb.org/>
-2. ISO/IEC/IEEE 29119 Software Testing. Международная серия стандартов по процессам, документации и техникам тестирования ПО: <https://www.iso.org/standard/81291.html>
-3. ISO/IEC 25010. Модель качества программного продукта: functional suitability, performance efficiency, compatibility, usability, reliability, security и другие характеристики: <https://iso25000.com/index.php/en/iso-25000-standards/iso-25010>
-4. OWASP Web Security Testing Guide. Руководство по тестированию безопасности web-приложений: <https://owasp.org/www-project-web-security-testing-guide/>
-5. OWASP Top Ten. Типовые категории рисков безопасности web-приложений: <https://owasp.org/www-project-top-ten/>
-6. IEEE Computer Society, SWEBOK Guide. Разделы о software testing и software quality: <https://www.computer.org/education/bodies-of-knowledge/software-engineering>
-7. Ministry of Testing. Практические материалы и глоссарий по видам тестирования: <https://www.ministryoftesting.com/>
-8. Nielsen Norman Group. Материалы по usability testing и пользовательским исследованиям: <https://www.nngroup.com/topic/user-testing/>
-
 ### 23. Классификация тестирования по уровням тестирования. Примеры [8]
 
 #### Краткое определение
@@ -21119,15 +20905,6 @@ End-to-end тесты полезны, но они дорогие, медленн
 
 ---
 
-#### Источники
-
-1. ISTQB. **Certified Tester Foundation Level Syllabus v4.0.1**. Разделы о test levels, test types, V-model и test pyramid. URL: <https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf>
-2. ISTQB Glossary. **Software Testing Glossary**: термины component testing, integration testing, system testing, acceptance testing, alpha testing, beta testing. URL: <https://glossary.istqb.org/>
-3. ISO/IEC/IEEE 29119 series. **Software testing standards**: общие понятия, процессы и документация тестирования. URL: <https://committee.iso.org/sites/jtc1sc7/home/projects/flagship-standards/isoiecieee-29119-series.html>
-4. IEEE Standards Association. **ISO/IEC/IEEE 29119 Software and systems engineering - Software testing series**. URL: <https://standards.ieee.org/wp-content/uploads/import/documents/tocs/ISO_IEC_IEEE_29119.pdf>
-5. ISO/IEC/IEEE 29119-1:2013 page. **Software and systems engineering - Software testing - Part 1: Concepts and definitions**. URL: <https://standards.iteh.ai/catalog/standards/iso/2ad5cf1e-ec59-4c7f-921c-fac45f6b533b/iso-iec-ieee-29119-1-2013>
-6. SWEBOK Guide. **Software Engineering Body of Knowledge**, раздел Software Testing. URL: <https://www.computer.org/education/bodies-of-knowledge/software-engineering>
-
 ### 24. Классификация дефектов и жизненный цикл дефекта. Схема [8]
 
 #### Краткое определение
@@ -21632,15 +21409,6 @@ mindmap
 Для качества продукта важно не только исправлять отдельные баги, но и анализировать причины их появления. Если команда видит, где дефекты возникают чаще всего, она может улучшать требования, архитектуру, код-ревью, тестовые данные, автоматизацию, деплой и мониторинг. Поэтому дефект-менеджмент является не вспомогательной бюрократией, а частью управления качеством программной инженерии.
 
 ---
-
-#### Источники
-
-1. ISTQB. **Certified Tester Foundation Level Syllabus v4.0.1**: термины defect, error, failure, основы тестирования и управления дефектами. URL: <https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf>
-2. ISTQB Glossary. **Software Testing Glossary**: определения defect, error, failure, severity, priority, defect report. URL: <https://glossary.istqb.org/>
-3. IEEE. **IEEE Std 1044-2009: IEEE Standard Classification for Software Anomalies**: классификация программных аномалий и дефектов. URL: <https://standards.ieee.org/ieee/1044/4483/>
-4. ISO/IEC/IEEE 29119 series. **Software and systems engineering - Software testing**: процессы, документация и понятия тестирования. URL: <https://committee.iso.org/sites/jtc1sc7/home/projects/flagship-standards/isoiecieee-29119-series.html>
-5. SWEBOK Guide. **Guide to the Software Engineering Body of Knowledge**, разделы Software Quality и Software Testing. URL: <https://www.computer.org/education/bodies-of-knowledge/software-engineering>
-6. Atlassian. **Bug tracking and issue management guidance**: практические подходы к жизненному циклу и приоритизации дефектов в issue tracker. URL: <https://www.atlassian.com/agile/software-development/bug-tracking>
 
 ### 25. Организация и управление процессом тестирования. Схемы [8]
 
@@ -22442,17 +22210,6 @@ flowchart LR
 
 ---
 
-#### Источники
-
-1. ISTQB. *Certified Tester Foundation Level Syllabus* - разделы о test process, test planning, monitoring and control, test analysis, design, implementation, execution and completion: <https://www.istqb.org/certifications/certified-tester-foundation-level>
-2. ISO/IEC/IEEE 29119 Software Testing - международная серия стандартов по процессам, документации и техникам тестирования: <https://www.iso.org/standard/45142.html>
-3. IEEE 829, *Standard for Software and System Test Documentation* - исторический стандарт по тестовой документации, тест-планам и отчетам: <https://standards.ieee.org/ieee/829/3787/>
-4. SWEBOK Guide, Software Testing knowledge area - обзор уровней, техник, процесса и управления тестированием: <https://www.computer.org/education/bodies-of-knowledge/software-engineering>
-5. Rex Black. *Managing the Testing Process* - практики планирования, контроля, метрик и управления дефектами в тестировании.
-6. Glenford J. Myers, Corey Sandler, Tom Badgett. *The Art of Software Testing* - базовые принципы проектирования тестов и поиска дефектов.
-7. Cem Kaner, Jack Falk, Hung Q. Nguyen. *Testing Computer Software* - практические подходы к дефектам, тест-дизайну и организации тестирования.
-8. Материалы лекций по программной инженерии: темы QA/QC, уровни тестирования, тестовый процесс, управление дефектами и метрики качества.
-
 ### 26. Функциональное назначение Docker. Контейнеризация и виртуализация
 
 #### Краткий ответ
@@ -22879,16 +22636,6 @@ docker push registry.example.com/demo-app:1.0
 Docker предназначен для стандартизированной упаковки, доставки и запуска приложений в контейнерах. Он делает окружение приложения воспроизводимым, ускоряет разработку и деплой, упрощает масштабирование и хорошо подходит для современных сервисных архитектур.
 
 Контейнеризация и виртуализация решают похожую задачу изоляции, но делают это на разных уровнях. Виртуальная машина содержит полноценную гостевую ОС и обеспечивает более сильную изоляцию ценой больших накладных расходов. Контейнер использует ядро хоста, поэтому легче, быстрее и удобнее для массового запуска приложений, но требует внимательного отношения к безопасности, хранению данных и настройке окружения.
-
-#### Источники
-
-- Docker Docs. **What is Docker?** https://docs.docker.com/engine/docker-overview/
-- Docker Docs. **What is a container?** https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/
-- Docker Docs. **What is an image?** https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/
-- Docker Docs. **Dockerfile overview.** https://docs.docker.com/build/concepts/dockerfile/
-- Docker Docs. **Writing a Dockerfile.** https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/
-- Docker Docs. **Build, tag, and publish an image.** https://docs.docker.com/get-started/docker-concepts/building-images/build-tag-and-publish-an-image/
-- Docker Docs. **Container security FAQs.** https://docs.docker.com/security/faqs/containers/
 
 ### 27. Архитектура платформы контейнеризации Docker
 
@@ -23500,17 +23247,6 @@ docker run -p 8080:80 nginx
 
 ---
 
-#### Источники
-
-1. Docker Docs. **What is Docker? Docker architecture** - https://docs.docker.com/get-started/docker-overview/
-2. Docker Docs. **Docker Engine API** - https://docs.docker.com/reference/api/engine/
-3. Docker Docs. **dockerd CLI reference** - https://docs.docker.com/reference/cli/dockerd/
-4. Docker Docs. **Volumes** - https://docs.docker.com/engine/storage/volumes/
-5. Docker Docs. **Network drivers** - https://docs.docker.com/engine/network/drivers/
-6. Docker Docs. **BuildKit** - https://docs.docker.com/build/buildkit/
-7. Docker Docs. **Docker Compose** - https://docs.docker.com/compose/
-8. Open Container Initiative. **Runtime Specification** - https://github.com/opencontainers/runtime-spec
-
 ### 28. Назначение Apache Airflow. Понятие DAG файла, задачи (task), операторов
 
 #### Краткий ответ
@@ -24019,16 +23755,6 @@ Apache Airflow - это инструмент оркестрации workflow. Е
 Scheduler определяет, какие задачи готовы к запуску, executor организует их выполнение, workers выполняют работу, metadata database хранит состояние, а UI дает прозрачность и управление. Поэтому Airflow особенно ценен в data engineering, интеграционных процессах, отчетности и любых регулярных pipelines, где важны порядок, повторяемость и наблюдаемость.
 
 ---
-
-#### Источники
-
-1. Apache Airflow Documentation: Dags - <https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html>
-2. Apache Airflow Documentation: Tasks - <https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/tasks.html>
-3. Apache Airflow Documentation: Operators - <https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/operators.html>
-4. Apache Airflow Documentation: Executor - <https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/executor/index.html>
-5. Apache Airflow Documentation: Scheduler - <https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/scheduler.html>
-6. Apache Airflow Documentation: UI Overview - <https://airflow.apache.org/docs/apache-airflow/stable/ui.html>
-7. Apache Airflow Documentation: Best Practices - <https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html>
 
 ### 29. Конвейер обработки данных. ETL и ELT
 
@@ -24630,16 +24356,6 @@ ELT чаще выбирают, если:
 Batch-подход подходит для периодической обработки и отчетности, stream-подход - для событий и низкой задержки. ETL и ELT отличаются порядком загрузки и преобразования: ETL очищает и преобразует данные до целевого хранилища, ELT сначала загружает сырье, а затем использует вычислительную мощность хранилища для трансформаций.
 
 Хороший pipeline должен быть не только работающим, но и управляемым: с понятными владельцами, проверками качества, идемпотентными перезапусками, наблюдаемостью, контролем доступа и возможностью пересчета.
-
-#### Источники
-
-- IBM Think: [ELT vs. ETL: What's the Difference?](https://www.ibm.com/think/topics/elt-vs-etl)
-- IBM: [What is ETL (Extract, Transform, Load)?](https://www.ibm.com/topics/etl)
-- Apache Airflow Documentation: [Architecture Overview](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/overview.html)
-- Apache Airflow Documentation: [DAGs](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html)
-- Google Cloud Dataflow: [Work with Dataflow data pipelines](https://cloud.google.com/dataflow/docs/guides/data-pipelines)
-- Google Cloud Dataflow: [Streaming pipelines](https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines)
-- Apache Kafka Documentation: [Introduction](https://kafka.apache.org/documentation/)
 
 ### 30. Архитектура Airflow. Принципы построения пайплайнов
 
@@ -25708,15 +25424,3 @@ Airflow - это система оркестрации, в которой pipeli
 Главный инженерный принцип Airflow: пайплайн должен быть не просто "последовательностью скриптов", а управляемым, повторяемым и наблюдаемым процессом. Для этого задачи делают идемпотентными, зависимости - явными, ретраи - осмысленными, SLA/дедлайны - контролируемыми, данные - привязанными к интервалу обработки, а тяжелые вычисления - вынесенными в подходящие внешние системы.
 
 Хороший DAG легко читать, безопасно перезапускать, удобно отлаживать и можно масштабировать без переписывания бизнес-логики.
-
-#### Источники
-
-- Apache Airflow Documentation. **Architecture Overview**. Официальная документация Airflow 3.2.2. https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/overview.html
-- Apache Airflow Documentation. **Scheduler**. Официальная документация Airflow 3.2.2. https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/scheduler.html
-- Apache Airflow Documentation. **Executor**. Официальная документация Airflow 3.2.2. https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/executor/index.html
-- Apache Airflow Documentation. **Tasks**. Официальная документация Airflow 3.2.2. https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/tasks.html
-- Apache Airflow Documentation. **Best Practices**. Официальная документация Airflow 3.2.2. https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html
-- Apache Airflow Documentation. **Migrating from SLA to Deadline Alerts**. Официальная документация Airflow 3.2.2. https://airflow.apache.org/docs/apache-airflow/stable/howto/sla-to-deadlines.html
-- Apache Airflow Documentation. **DAGs**. Документация по базовым понятиям DAG и зависимостей. https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html
-- Apache Airflow Documentation. **XComs**. Документация по передаче небольших сообщений между задачами. https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/xcoms.html
-- Apache Airflow Documentation. **Dynamic Task Mapping**. Документация по динамическому созданию экземпляров задач. https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/dynamic-task-mapping.html
